@@ -1,10 +1,10 @@
 # GitHub User Explorer
 
-A web application for searching GitHub profiles, viewing user details, repositories, and trending projects. Built with Next.js App Router conventions running on Vinext (a Vite-based Next.js alternative).
+A web application for searching GitHub profiles, viewing user details, repositories, and trending projects. Built with Next.js App Router and the GitHub REST API.
 
 ## Tech Stack
 
-- **Framework**: Vinext (Next.js API surface on Vite)
+- **Framework**: Next.js 15 (App Router)
 - **Runtime**: Node.js 22
 - **UI**: React 19 with TypeScript
 - **Styling**: Tailwind CSS 4
@@ -34,9 +34,19 @@ The dev server runs on port 5000:
 npm run dev
 ```
 
+## Deployment
+
+Configured for **Vercel** deployment:
+- Framework: Next.js (auto-detected)
+- Build command: `npm run build`
+- See `vercel.json` for config
+
+To deploy on Vercel:
+1. Go to vercel.com and import the GitHub repo `jessymuia/github-user-explorer-vinext`
+2. Vercel will auto-detect Next.js and deploy automatically
+
 ## Key Files
 
-- `vite.config.ts` - Vite configuration with vinext plugin, port 5000, host 0.0.0.0
-- `package.json` - Scripts use `vinext dev --port 5000 -H 0.0.0.0`
 - `next.config.ts` - Next.js config (image remote patterns for GitHub avatars)
+- `vercel.json` - Vercel deployment config
 - `lib/github.ts` - GitHub API client
